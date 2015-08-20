@@ -1,0 +1,9 @@
+diff a/InternhipSample/wwwroot/activity.html b/InternhipSample/wwwroot/activity.html	(rejected hunks)
+@@ -15,7 +15,6 @@
+     <script src="/lib/Chart.js"></script>
+ 
+     <!-- 必要なJavaScriptファイルを読み込む -->
+-    <script src="/js/environment.js"></script>
+     <script src="/js/site.js"></script>
+     <script src="/js/activity.js"></script>
+ 

@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+
+    <!-- JavaScriptライブラリファイルを読み込む -->
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/lib/jquery.cookie/jquery.cookie.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/lib/bootstrap-touch-carousel/dist/js/bootstrap-touch-carousel.js"></script>
+    <script src="/lib/dateformat/dateformat.js"></script>
+    <script src="/lib/hammer.js/hammer.js"></script>
+    <script src="/lib/Chart.js"></script>
+
+    <!-- 必要なJavaScriptファイルを読み込む -->
+    <script src="/js/environment.js"></script>
+    <script src="/js/site.js"></script>
+    <script src="/js/bodyComp.js"></script> 
+
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/lib/bootstrap-touch-carousel/dist/css/bootstrap-touch-carousel.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="/css/graphStyle.css" />
+
+    <title>体組成</title>
+</head>
+<body>
+    <!-- ナビゲーションバー -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">トップ</a></li>
+                    <li class="active"><a href="/bodyComp.html">体組成</a></li>
+                    <li><a href="/activity.html">活動量</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--グラフ描画-->
+    <div class="lineChart">
+        <h1>体重推移グラフ</h1>
+        <canvas id="bodyWeightGraph" height="500" width="500"></canvas>
+    </div>
+
+    <!-- ボディ -->
+    <div class="container">
+        <h1>体組成</h1>
+        <div class="row">
+            <div id="loading" class="alert alert-info">ロード中...</div>
+            <table class="table table-striped" id="table"></table>
+        </div>
+        <form class="form-inline">
+            <div class="form-group">
+                開始日：<input type="date" class="form-control" name="startDate" /> 〜 終了日：<input type="date" class="form-control" name="endDate" /> <button class="btn btn-primary" onclick="loadTable(); return false;">取得</button>
+            </div>
+        </form>
+
+        <h2>登録</h2>
+        <div class="row">
+            <!-- 通信中の状態をユーザーに表示する -->
+            <div class="alert alert-warning" id="postProgress" style="display: none">体組成データをサーバに登録しています。</div>
+            <div class="alert alert-success" id="postComplete" style="display: none">体組成データの登録が完了しました！</div>
+        </div>
+
+        <form name="postForm">
+            <div class="form-group">
+                <label for="measurementDate">計測日 (yyyy/mm/dd)</label>
+                <input name="measurementDate" id="measurementDate" type="text" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label for="weight">体重</label>
+                <input name="weight" id="weight" type="number" class="form-control" value="60" />
+            </div>
+            <div class="form-group">
+                <label for="boneWeight">骨量</label>
+                <input name="boneWeight" id="bmi" type="number" class="form-control" value="10" />
+            </div>
+            <div class="form-group">
+                <label for="bmi">BMI</label>
+                <input name="bmi" id="bmi" type="number" class="form-control" value="40" />
+            </div>
+            <div class="form-group">
+                <label for="musclePercent">体脂肪率</label>
+                <input name="musclePercent" id="musclePercent" type="number" class="form-control" value="50" />
+            </div>
+            <input type="hidden" name="inputType" value="1" />
+            <div class="row">
+                <button id="btn-post" class="btn btn-primary">登録</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

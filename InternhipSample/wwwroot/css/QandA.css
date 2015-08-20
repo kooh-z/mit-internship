@@ -1,0 +1,54 @@
+﻿body {
+}
+.dropdown:hover > .dropdown-menu{
+  display: block;
+}
+
+dl{
+     width:650px;
+     margin:80px;
+     line-height:1.8em;
+     font-size: 1.4em;
+     overflow: hidden;
+     _zoom: 1;
+}
+
+dl dd,
+dl dt{
+     text-indent: -2.6em;   
+     padding: 0 20px 0px 50px;
+}
+
+.jumbotron {
+  background-image: url("image/photo.jpg");
+  background-size: cover;
+  background-position: center 60%;
+}
+
+dl dt{
+     margin:20px 20px 0 0;
+}
+
+dl dd:first-letter,
+dl dt:first-letter{
+     font-size: 1.6em;
+     font-weight: bold;
+     margin-right:10px;
+     padding:5px;
+     font-family: 'Nunito', sans-serif;
+}
+
+
+dl dd{
+     margin: 20px 0 -1px 0;
+     padding-bottom:15px;
+     border-bottom: 1px #000 dotted;
+}
+
+
+dl dt:first-letter{
+     color: #0F78E1;
+}
+dl dd:first-letter{
+     color: #ff6767;
+}

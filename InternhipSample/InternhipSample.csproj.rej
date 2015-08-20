@@ -1,0 +1,14 @@
+diff a/InternhipSample/InternhipSample.csproj b/InternhipSample/InternhipSample.csproj	(rejected hunks)
+@@ -178,10 +178,12 @@
+     <Content Include="Global.asax" />
+     <Content Include="wwwroot\activity.html" />
+     <Content Include="wwwroot\bodyComp.html" />
++    <Content Include="wwwroot\bodyInfomation.html" />
+     <Content Include="wwwroot\css\graphStyle.css" />
+     <Content Include="wwwroot\css\site.css" />
+     <Content Include="wwwroot\favicon.ico" />
+     <Content Include="wwwroot\js\activity.js" />
++    <Content Include="wwwroot\js\bodyInformation.js" />
+     <Content Include="wwwroot\js\environment.js" />
+     <Content Include="wwwroot\js\bodyComp.js" />
+     <Content Include="wwwroot\index.html" />

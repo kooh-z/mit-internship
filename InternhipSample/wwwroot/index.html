@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+
+    <!-- JavaScriptライブラリファイルを読み込む -->
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/lib/jquery.cookie/jquery.cookie.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/lib/bootstrap-touch-carousel/dist/js/bootstrap-touch-carousel.js"></script>
+    <script src="/lib/dateformat/dateformat.js"></script>
+    <script src="/lib/hammer.js/hammer.js"></script>
+
+    <!-- 必要なJavaScriptファイルを読み込む -->
+    <script src="/js/site.js"></script>
+    <script src="/js/loginButton.js"></script>
+    <script src="/js/sha1.js"></script>
+
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/lib/bootstrap-touch-carousel/dist/css/bootstrap-touch-carousel.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <style>
+        #output1 {
+            display: none;
+        }
+
+        #output2 {
+            display: none;
+        }
+    </style>
+
+    <script src="/js/site.js"></script>
+
+    <script src="/lib/Chart.js"></script>
+    <title>キューティー</title>
+</head>
+<body>
+    <!--ロゴ画像読み込み-->
+    <center>
+        <img src="images/qutieLogo.png" id="logo" alt="SAMPLE IMAGE" class="img-responsive img-responsive-overwrite">
+    </center>
+    <!--ログインボタン-->
+    <p>
+        <center>
+            <div><a href="#" type="button" class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#login-modal">ログイン</a></div>
+        </center>
+        <!--ログイン画面表示-->
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="loginmodal-container">
+                    <h1>Login to Your Account</h1><br>
+                    <form name="form1" id="idForm1" action="">
+                        <input type="text" name="textBox1" id="idTextBox1" placeholder="Username">
+                        <input type="password" name="textBox2" id="idTextBox2" placeholder="Password">
+                        <input type="button" name="login" class="login loginmodal-submit" value="Login" onclick="onButtonClick();">
+                    </form>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> ログイン状態を維持する
+                        </label>
+                    </div>
+                    <div class="login-help">
+                        <a href="#">パスワードを忘れたら</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </p>
+    <div id="output1"></div>
+    <div id="output2"></div>
+    <!--新規登録-->
+    <p><center><button type="button" class="btn btn-default btn-lg">新規登録</button></center></p>
+    <center>
+        <img src="images/tori.png" alt="SAMPLE IMAGE" class="img-responsive img-responsive-overwrite">
+    </center>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿.open{
+  background: #fa2;
+  color: #fff;
+  cursor: pointer;
+  width: 150px;
+  padding: 10px;
+}
+#slideBox{
+    background-color: white;
+    width: 40%;
+    padding: 10px; 
+    border: 1px #ccc solid;
+    display: none;
+}
+.date {
+    font-size: 12px;
+}
+
+.tooltip {
+  margin: 100px 0 0;
+  list-style: none;
+}
+.tooltip li {
+  margin: 0 10px;
+  float: left;
+  position: relative;
+  text-align: center;
+}
+.tooltip a {
+  padding: 14px 10px;
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  width: 180px;
+}
+.tooltip li span {
+  background: #ffc;
+  border: 1px solid #fc6;
+  height: 45px;
+  position: absolute;
+  top: -85px;
+  left: 0;
+  text-align: center;
+  padding: 20px 12px 10px;
+  z-index: 2;
+  display: none;
+}
+#captions{
+    float:left;
+    width:50%;
+    color:black;
+
+}
+
+

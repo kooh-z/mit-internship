@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+
+    <!-- JavaScriptライブラリファイルを読み込む -->
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/lib/jquery.cookie/jquery.cookie.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/lib/bootstrap-touch-carousel/dist/js/bootstrap-touch-carousel.js"></script>
+    <script src="/lib/dateformat/dateformat.js"></script>
+    <script src="/lib/hammer.js/hammer.js"></script>
+
+    <!-- 必要なJavaScriptファイルを読み込む -->
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/lib/bootstrap-touch-carousel/dist/css/bootstrap-touch-carousel.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="/css/QandA.css" />
+    <link rel="stylesheet" href="/css/menuBar.css">
+
+    <script src="/js/site.js"></script>
+    <script src="/js/QandA.js"></script>
+    <script src="/js/logout.js"></script>
+    <script type="text/javascript" src="js/jquery.smoothScroll.js"></script>
+
+    <title>妊活Q&A</title>
+</head>
+<body>
+    <div class="jumbotron" id="header">
+        <h1>妊活Q&A</h1>
+        <p>妊活のことがよくわからないアナタ！</p>
+        <p>調べてみてね！</p>
+    </div>
+
+    <!--各ページリンク-->
+    <div id='cssmenu'>
+        <ul>
+            <li><a href='/wwwroot/main.html'><span>メイン</span></a></li>
+            <li><a href='/wwwroot/activity.html'><span>カラダ推移</span></a></li>
+            <li><a href='/wwwroot/QandA.html'><span>妊活Q&A</span></a></li>
+            <li class='last' onclick="logout();"><a href='/wwwroot/index.html'><span>ログアウト</span></a></li>
+        </ul>
+    </div>
+    <nav class="navbar navbar-fixed-bottom" role="navigation">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">カテゴリ <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="#nin">妊活</a></li>
+                <li><a href="#eat">食事</a></li>
+                <li><a href="#term">期間</a></li>
+                <li><a href="#cssmenu">トップへ↑</a></li>
+            </ul>
+        </div>
+    </nav>
+    <dl>
+        <div id="nin">
+            <dt>Q妊活ってなに？</dt>
+            <dd>A妊活って言うのは妊娠についての正しい知識をつけて自分の体の状態を把握し、妊娠するために前向きに活動することだよ♪</dd>
+            <dt>Q妊活って何するの？</dt>
+            <dd>A妊活では基礎体温の測定や食生活の改善、葉酸の摂取するのが大事だよ!!</dd>
+            <dt>Qどんな人が妊娠しやすいの?</dt>
+            <dd>A若い人（30代前半くらいまで）、生理が順調な人、冷え性でない人、大きなストレスのない人が妊娠しやすいらしいよ</dd>
+            <dt>Q初めて出産する人の平均年齢はどれくらい?</dt>
+            <dd>A2012年の人口動態調査によると、第１子出生時の母の平均年齢は30.3歳みたい</dd>
+            <dt>Q妊娠する確率ってどれくらい?</dt>
+            <dd>A１か月で妊娠する確率は、健康な男女がちゃんと排卵日に子作りしても約20~30％くらいなんだって(>_<)</dd>
+            <dt>Q高齢出産ってデメリットしかないの?</dt>
+            <dd>A高齢出産のデメリットはたくさんあるけど子宮体がんのリスクが下がったりアンチエイジングの効果があったりいいこともあるよ☆</dd>
+            <dt>Q生理がある＝排卵している（子どもができる可能性がある）ということですか?</dt>
+            <dd>A思春期、授乳中、更年期に排卵とは関係ない生理がくるから関係ないよ~</dd>
+            <dt>Qタイミング療法ってなに?</dt>
+            <dd>A排卵日2日前に性行為をすることで妊娠する確率を高めることだよ♪</dd>
+            <dt>Q妊娠を希望しているならタバコはやめるべきですか?</dt>
+            <dd>Aヘビースモーカーは卵や精子の数が通常の人よりも少ないらしいからやめたほうがいいよ～</dd>
+            <dt>Q排卵日の付近だけ子作りする方が妊娠しやすいの?</dt>
+            <dd>A精子をためておくために排卵日の前数日は少なくとも禁欲した方がいいけどそれ以外は自由にしてもいいよ♪</dd>
+        </div>
+        <div id="eat">
+            <dt>Q葉酸ってなに？</dt>
+            <dd>A葉酸は赤ちゃんの脳や神経を作るのにとても大事な栄養素だよ☆</dd>
+            <dt>Q1日に食べていいカロリーってどれくらい?</dt>
+            <dd>A1日食べていいカロリーは自分の目標の体重の25～30倍!!</dd>
+            <dt>Q妊娠率をアップさせるような食品はあるの？</dt>
+            <dd>Aマカやザクロがいいみたい☆</dd>
+            <dt>Q妊娠を希望しているけれど、コーヒーは控えた方がいいの？</dt>
+            <dd>A赤ちゃんに刺激物（カフェイン）は良くないから、排卵日以降はできれば控えた方がいいよ～</dd>
+        </div>
+        <div id="term"></div>
+        <dt>Q女性が妊娠までにかかる期間ってどれぐらい?</dt>
+        <dd>A適齢期の女性が妊娠までにかかる期間の平均は約半年だよ♪</dd>
+        <dt>Q妊娠の適齢期っていつ?</dt>
+        <dd>A25歳～35歳が妊娠の適齢期だよ～</dd>
+        <dt>Q妊娠は性行為からどれくらいで確定しますか?</dt>
+        <dd>A妊娠検査薬が反応するのは早ければ性行為の2週間後くらいだって</dd>
+        <dt>Q何歳まで妊娠できるの?</dt>
+        <dd>A一般的には43歳位まで妊娠できるらしいよ。</dd>
+    </dl>
+
+
+    <center>
+        <!--Twitter連携-->
+        <div class="btn-group">
+            <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
+        </div>
+
+        <div id="fb-root"></div>
+        <script>
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.4";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+        <!--facebook連携-->
+        <div class="fb-like"></div>
+    </center>
+
+</body>
+</html>

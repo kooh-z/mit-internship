@@ -1,0 +1,45 @@
+﻿/*body {
+    background: #66ccff;
+    padding-top: 20px;
+}*/
+#myChart {
+    background: #EB6841;
+}
+.chart {
+    position: relative;
+    float: left; 
+    margin-right: 20px;
+}
+.chart .count {
+    position: absolute;
+    border-radius: 50%;
+    top: 60px;
+    left: 60px;
+    height: 152px;
+    width: 152px;
+}
+
+.chart em, 
+.chart span {
+    font-family: Arial;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+.chart em {
+    display: block;
+    font-size: 50px;
+    font-style: normal;
+    color: #fff;
+    line-height: 150px;
+}
+.chart .caption {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    color: #fff;
+}
+
+.lineChart {
+
+}
